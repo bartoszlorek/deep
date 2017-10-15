@@ -6,9 +6,9 @@ function makeArrayFilter(func) {
             result = []
 
         while (++index < length) {
-            let next = func(predicate, array[index], index, parent)
-            if (next !== undefined) {
-                result[resIndex++] = next
+            let value = func(predicate, array[index], index, parent)
+            if (value !== undefined) {
+                result[resIndex++] = value
             }
         }
         if (resIndex > 0 || parent === undefined) {

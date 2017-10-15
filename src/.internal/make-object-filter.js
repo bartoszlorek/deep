@@ -8,9 +8,9 @@ function makeObjectFilter(func) {
 
         while (length--) {
             let key = props[++index],
-                next = func(predicate, object[key], key, parent)
-            if (next !== undefined) {
-                result[key] = next
+                value = func(predicate, object[key], key, parent)
+            if (value !== undefined) {
+                result[key] = value
                 resLength += 1
             }
         }
