@@ -28,7 +28,7 @@ iterations arguments:
 1. childA, 0, "parent"
 2. childB, 0, 1
 3. childC, 1, 1
-4. childD, 0, "parent"
+4. childD, 2, "parent"
 
 ## Functions
 
