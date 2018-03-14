@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ubery/deep.git"
+    "url": "git+https://github.com/bartoszlorek/deep.git"
   },
   "author": "Bartosz Lorek",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ubery/deep/issues"
+    "url": "https://github.com/bartoszlorek/deep/issues"
   },
-  "homepage": "https://github.com/ubery/deep#readme",
+  "homepage": "https://github.com/bartoszlorek/deep#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
