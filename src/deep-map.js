@@ -1,4 +1,4 @@
-import { isPlainObject } from 'lodash'
+import isPlainObject from 'is-plain-object'
 import makeArrayMap from './.internal/make-array-map'
 import makeObjectMap from './.internal/make-object-map'
 

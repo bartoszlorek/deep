@@ -5,7 +5,6 @@ const isTruthy = (value, key, parent) => {
 }
 
 describe('deep-filter.js', () => {
-
     it('should return null after falsy', () => {
         expect(deepFilter(null, isTruthy)).toBe(null)
         expect(deepFilter('', isTruthy)).toBe(null)
@@ -55,5 +54,4 @@ describe('deep-filter.js', () => {
         expect(deepFilter(data, isTruthy))
             .toEqual(result)
     })
-
 })

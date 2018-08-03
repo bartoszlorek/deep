@@ -1,11 +1,6 @@
 import deepEach from '../src/deep-each'
 
 describe('deep-each.js', () => {
-
-    const addTwo = (value, key, parent) => {
-        return value + 2
-    }
-
     it('should return input', () => {
         let none = () => { },
             object = { a: 'A' },
@@ -52,5 +47,4 @@ describe('deep-each.js', () => {
         expect(calls[1]).toEqual(['B', 0, 'b'])
         expect(calls[3]).toEqual(['D', 'd', 2])
     })
-
 })

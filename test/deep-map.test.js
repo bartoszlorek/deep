@@ -1,10 +1,7 @@
 import deepMap from '../src/deep-map'
 
 describe('deep-map.js', () => {
-
-    const addTwo = (value, key, ancestor) => {
-        return value + 2
-    }
+    const addTwo = value => value + 2
 
     it('should return base data', () => {
         expect(deepMap()).toBe(null)
@@ -19,11 +16,7 @@ describe('deep-map.js', () => {
     })
 
     it('should iterate multidimensional array', () => {
-        let result = deepMap([
-            'dog',
-            ['fish', 'shark'],
-            'cat'
-        ], addTwo)
+        let result = deepMap(['dog', ['fish', 'shark'], 'cat'], addTwo)
 
         expect(result[0]).toBe('dog2')
         expect(result[1][1]).toBe('shark2')
@@ -31,15 +24,17 @@ describe('deep-map.js', () => {
     })
 
     it('should iterate multidimensional object', () => {
-        let result = deepMap({
-            dog: 'Jake',
-            fish: ['Goldie', 'Sunny'],
-            cat: 'Kitty'
-        }, addTwo)
+        let result = deepMap(
+            {
+                dog: 'Jake',
+                fish: ['Goldie', 'Sunny'],
+                cat: 'Kitty'
+            },
+            addTwo
+        )
 
         expect(result.dog).toBe('Jake2')
         expect(result.fish[1]).toBe('Sunny2')
         expect(result.cat).toBe('Kitty2')
     })
-
 })

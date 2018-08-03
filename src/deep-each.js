@@ -1,4 +1,4 @@
-import { isPlainObject } from 'lodash'
+import isPlainObject from 'is-plain-object'
 import makeArrayEach from './.internal/make-array-each'
 import makeObjectEach from './.internal/make-object-each'
 

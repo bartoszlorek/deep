@@ -1,4 +1,4 @@
-import { isPlainObject } from 'lodash'
+import isPlainObject from 'is-plain-object'
 import makeArrayFilter from './.internal/make-array-filter'
 import makeObjectFilter from './.internal/make-object-filter'
 
