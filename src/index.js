@@ -1,9 +1,3 @@
-import deepEach from '../src/deep-each'
-import deepMap from '../src/deep-map'
-import deepFilter from '../src/deep-filter'
-
-module.exports = {
-    deepEach,
-    deepMap,
-    deepFilter
-}
+export { default as deepEach } from '../src/deep-each'
+export { default as deepMap } from '../src/deep-map'
+export { default as deepFilter } from '../src/deep-filter'

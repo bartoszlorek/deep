@@ -1,5 +1,7 @@
 'use strict';
 
+Object.defineProperty(exports, '__esModule', { value: true });
+
 /*!
  * isobject <https://github.com/jonschlinkert/isobject>
  *
@@ -208,8 +210,6 @@ function deepFilter(value, predicate) {
     return result !== undefined ? result : null;
 }
 
-module.exports = {
-    deepEach: deepEach,
-    deepMap: deepMap,
-    deepFilter: deepFilter
-};
+exports.deepEach = deepEach;
+exports.deepMap = deepMap;
+exports.deepFilter = deepFilter;
