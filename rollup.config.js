@@ -31,7 +31,7 @@ const result = files.map(fileName => {
         exclude: 'node_modules/**'
       })
     ]
-  }
+  };
 });
 
 export default result;

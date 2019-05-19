@@ -1,4 +1,4 @@
-import deepEach from './deep-each'
+import deepEach from './deep-each';
 
 describe('deep-each.js', () => {
   const breakOnValueD = jest.fn(value => {
@@ -20,7 +20,7 @@ describe('deep-each.js', () => {
 
   it('walks through input value', () => {
     const iteratee = jest.fn();
-    deepEach(['A', { b: 'B' }, 'C'], iteratee);
+    deepEach(['A', {b: 'B'}, 'C'], iteratee);
 
     expect(iteratee.mock.calls).toEqual([
       ['A', 0, undefined],
@@ -38,22 +38,27 @@ describe('deep-each.js', () => {
       ['C', 1, 1],
       ['D', 0, 2]
     ]);
-  })
+  });
 
   it('can break in multidimensional object', () => {
-    deepEach({
+    const data = {
       a: 'A',
-      b: ['B', 'C', {
-        d: 'D'
-      }],
+      b: [
+        'B',
+        'C',
+        {
+          d: 'D'
+        }
+      ],
       e: 'E'
-    }, breakOnValueD)
+    };
 
+    deepEach(data, breakOnValueD);
     expect(breakOnValueD.mock.calls).toEqual([
       ['A', 'a', undefined],
       ['B', 0, 'b'],
       ['C', 1, 'b'],
       ['D', 'd', 2]
     ]);
-  })
-})
+  });
+});

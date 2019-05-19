@@ -1,4 +1,4 @@
-import isPlainObject from 'is-plain-object'
+import isPlainObject from 'is-plain-object';
 
 function deepFilter(value, predicate) {
   if (value == null) {

@@ -1,4 +1,4 @@
-import isPlainObject from 'is-plain-object'
+import isPlainObject from 'is-plain-object';
 
 function deepMap(value, iteratee) {
   if (value == null) {

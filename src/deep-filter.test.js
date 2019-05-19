@@ -1,4 +1,4 @@
-import deepFilter from './deep-filter'
+import deepFilter from './deep-filter';
 
 const isTruthy = value => !(value == null || value === '');
 
@@ -11,7 +11,7 @@ describe('deep-filter.js', () => {
   it('removes empty items', () => {
     const data = ['', null];
     expect(deepFilter(data, isTruthy)).toEqual([]);
-  })
+  });
 
   it('removes empty properties', () => {
     const data = {
@@ -21,7 +21,7 @@ describe('deep-filter.js', () => {
     expect(deepFilter(data, isTruthy)).toEqual({
       bar: [4]
     });
-  })
+  });
 
   it('returns filtered data', () => {
     const data = {
@@ -32,25 +32,17 @@ describe('deep-filter.js', () => {
         c: 'C',
         d: null
       },
-      list: [
-        null,
-        'D',
-        'E',
-        ''
-      ]
-    }
+      list: [null, 'D', 'E', '']
+    };
 
     const result = {
       bar: {
         a: 'A',
         c: 'C'
       },
-      list: [
-        'D',
-        'E'
-      ]
+      list: ['D', 'E']
     };
 
     expect(deepFilter(data, isTruthy)).toEqual(result);
-  })
-})
+  });
+});
